@@ -239,7 +239,7 @@ export class ProductListComponent {
       price: 30,
       is_in_inventory: false,
       items_left: 4,
-      imageURL: "https://cdn.shopify.com/s/files/1/0016/0074/9623/products/BRIDGPORT_ADVICE-BLACK_1_800x800.jpg?v=1576567903",
+      imageURL: "https://th.bing.com/th/id/OIP.wR19cPPiSRs3AZJ_wsXU-wHaEk?pid=ImgDet&rs=1",
       slug: "bridgport-advice"
     },
     {
@@ -255,7 +255,7 @@ export class ProductListComponent {
       discountPrice:45,
       is_in_inventory: true,
       items_left: 5,
-      imageURL: "https://cdn.shopify.com/s/files/1/0016/0074/9623/products/Beck-Black_800x800.jpg",
+      imageURL: "https://images.boardriders.com/global/billabong-products/all/default/hi-res/abjs300003_billabong,p_nut_frt1.jpg",
       slug: "beck"
     },
     {
@@ -270,7 +270,7 @@ export class ProductListComponent {
       price: 70,
       is_in_inventory: true,
       items_left: 6,
-      imageURL: "https://cdn.shopify.com/s/files/1/0016/0074/9623/products/fester-Tan_800x800.jpg?v=1575537531",
+      imageURL: "https://th.bing.com/th/id/OIP.mn4c8wWouOlMihlnYe6NSgHaHU?pid=ImgDet&rs=1",
       slug: "fester"
     },
     {
@@ -285,7 +285,7 @@ export class ProductListComponent {
       price: 75,
       is_in_inventory: true,
       items_left: 7,
-      imageURL: "https://cdn.shopify.com/s/files/1/0016/0074/9623/products/PIXEL-TAN_800x800.jpg?v=1577420506",
+      imageURL: "https://th.bing.com/th/id/R.efc9d81ebd53ed8bfe0315362d6887ed?rik=HGxFxeVvP0BScQ&riu=http%3a%2f%2fwww.tennisnuts.com%2fimages%2fproduct%2ffull%2fNIKE-FREE-50-642198_406_A_PREM.jpg&ehk=tucvPac5jtnLAnXnFXgPajBJoAdraWQ%2fVg0cDe35EZk%3d&risl=&pid=ImgRaw&r=0",
       slug: "pixel"
     },
     {
@@ -500,7 +500,7 @@ export class ProductListComponent {
       price: 70,
       is_in_inventory: true,
       items_left: 3,
-      imageURL: "https://assets.reebok.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/7599294868804d78a1b1ab6f01718a5e_9366/Club_C_Revenge_Men's_Shoes_White_FV9877_01_standard.jpg",
+      imageURL: "https://assetscdn1.paytm.com/images/catalog/product/F/FO/FOONIKE-RUNALLDSMAR26297ED053FA/1563333298007_0..jpg",
       slug: "club-c-revenge-mens"
     },
     {

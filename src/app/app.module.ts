@@ -14,6 +14,7 @@ import { ProductComponent } from './container/product-list/product/product.compo
 import { FilterComponent } from './container/product-list/filter/filter.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { TimerComponent } from './header/timer/timer.component';
+import { HighlightDirective } from './CustomDirective/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { TimerComponent } from './header/timer/timer.component';
     ProductComponent,
     FilterComponent,
     ProductDetailComponent,
-    TimerComponent
+    TimerComponent,
+    HighlightDirective,
   ],
   imports: [
     BrowserModule,
