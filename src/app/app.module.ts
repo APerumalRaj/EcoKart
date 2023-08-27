@@ -15,6 +15,7 @@ import { FilterComponent } from './container/product-list/filter/filter.componen
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { TimerComponent } from './header/timer/timer.component';
 import { HighlightDirective } from './CustomDirective/highlight.directive';
+import { FavIconDirective } from './CustomDirective/fav-icon.directive';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { HighlightDirective } from './CustomDirective/highlight.directive';
     ProductDetailComponent,
     TimerComponent,
     HighlightDirective,
+    FavIconDirective,
   ],
   imports: [
     BrowserModule,

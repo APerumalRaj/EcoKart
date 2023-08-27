@@ -12,10 +12,24 @@ searchText : string = "";
 
 setsearchText(value : string){
  this.searchText = value
- console.log(this.searchText)
+}
+
+presearchText : string = ''
+
+onLoading(text){
+this.presearchText = text
+console.log(this.presearchText)
 }
  
 @ViewChild(ProductListComponent) ProductListComponent : ProductListComponent
+
+Destroy : string =''
+
+onChange(des : string){
+this.Destroy = des
+console.log(this.Destroy);
+
+}
 
 
 }

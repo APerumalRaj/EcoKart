@@ -1,7 +1,7 @@
 <div class="ekart--product--details--info scroll">
     <h1></h1>
-    <div class="ekart-product-detail-close">
-        <i class="fa fa-times" aria-hidden="true"></i>
+    <div class="ekart-product-detail-close" >
+        <button (click)="onClose()"><i class="fa fa-times" aria-hidden="true"></i></button>
     </div>
     <div class="ekart-product-detail-image">
         <img [src]="product.imageURL" class="ekart-product-detail-image">
@@ -12,9 +12,9 @@
             <h2>{{product.name}}</h2>
         </div>
         <div class="ekart-product-detail-gbc">
-            <span>MEN</span>
-            <span>NIKE</span>
-            <span>SPORTS</span>
+            <span>{{product.gender}}</span>
+            <span>{{product.brand}}</span>
+            <span>{{product.category}}</span>
         </div>
         <div class="ekart-product-detail-price">
             <p>

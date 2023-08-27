@@ -9,11 +9,11 @@ export class HighlightDirective {
   
   }
 
-  @HostListener('mouseenter')  onMouseEnter(){
+  @HostListener('mouseover')  onMouseOver(){
     this.render.addClass(this.element.nativeElement,'highlight')
   }
 
-  @HostListener('mouseout')  onMouseOut(){
+  @HostListener('mouseleave')  onMouseLeave(){
     this.render.removeClass(this.element.nativeElement,'highlight')
   }
 

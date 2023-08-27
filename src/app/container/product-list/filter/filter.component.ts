@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-filter',
@@ -15,10 +15,20 @@ export class FilterComponent {
 @Input()
  outStock : number = 0
 
+@Input()
+ women : number = 0
+
+@Input()
+ men : number = 0
+
+@Input()
+ kid : number = 0
+
 selectedFilter : string = 'all'
  
 @Output()
 selectedFilterChange = new EventEmitter<string>()
+
 
 onselectedFilterbtnChange() {
   console.log(this.selectedFilter)

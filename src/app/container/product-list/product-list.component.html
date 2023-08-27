@@ -1,10 +1,16 @@
-<app-filter [all]="totalProduct" [inStock]="istock" [outStock]="ostock" (selectedFilterChange)="onFilter($event)"></app-filter>
+<app-filter [all]="totalProduct" 
+[inStock]="istock" 
+[outStock]="ostock" 
+[men]="omen"
+[women]="owomen"
+[kid]="okids"
+(selectedFilterChange)="onFilter($event)"></app-filter>
     <!--  -->
 <ng-container class="ekart-products-container" *ngFor=" let prod of products" >
-    <ng-container *ngIf="selectedFilter == 'all' || prod.is_in_inventory.toString() == selectedFilter" >
+    <ng-container *ngIf="selectedFilter == 'all' || prod.is_in_inventory.toString() == selectedFilter || prod.gender.toLowerCase() == selectedFilter">
         <app-product [product]="prod" 
         *ngIf=" searchText=== '' || prod.name.toLowerCase().includes(searchText)"  
-        (click)="selectedproduct = prod"></app-product>
+        (dblclick)="selectedproduct = prod"></app-product>
     </ng-container>
 </ng-container>
 
