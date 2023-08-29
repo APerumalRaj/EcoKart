@@ -10,11 +10,13 @@ export class HighlightDirective {
   }
 
   @HostListener('mouseover')  onMouseOver(){
-    this.render.addClass(this.element.nativeElement,'highlight')
+    this.render.addClass(this.element.nativeElement,'highlight');
+    this.render.setStyle(this.element.nativeElement,'font-weight','bold')
   }
 
   @HostListener('mouseleave')  onMouseLeave(){
-    this.render.removeClass(this.element.nativeElement,'highlight')
+    this.render.removeClass(this.element.nativeElement,'highlight');
+    this.render.removeStyle(this.element.nativeElement,'font-weight')
   }
 
 }

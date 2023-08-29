@@ -1,6 +1,7 @@
 .ekart--search--product{
     margin: 20px auto;
     text-align: center;
+    cursor: pointer;
 }
 .ekart-search-product-input{
     width: 40%;

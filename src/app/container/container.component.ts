@@ -21,15 +21,22 @@ this.presearchText = text
 console.log(this.presearchText)
 }
  
-@ViewChild(ProductListComponent) ProductListComponent : ProductListComponent
+@ViewChild(ProductListComponent) ProductListComponent : ProductListComponent;
 
-Destroy : string =''
 
-onChange(des : string){
-this.Destroy = des
-console.log(this.Destroy);
+// Name
 
-}
+
+ 
+// ngOnInIt(){
+// }
+// Destroy : string =''
+
+// onChange(des : string){
+// this.Destroy = des
+// console.log(this.Destroy);
+
+// }
 
 
 }

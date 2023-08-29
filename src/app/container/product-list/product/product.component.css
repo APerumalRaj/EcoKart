@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
 .ekart--product--item{
     display: inline-block;
     width: 300px;
@@ -6,14 +7,27 @@
     padding: 5px 5px;
     border: lightskyblue 2px solid;
 }
+.fav{
+    cursor: pointer;
+}
 
 .highlight {
     --webkit-box-shadow : 0 0 1px 3px #000 inset;
     -moz-box-shadow: 0 0 1px 3px #000 inset ;
     border: gray 2px solid;
-    transform: scale(1.15);
+    transform: scale(1.11);
+    transition: 0.18s;
     box-shadow: 5px 5px 9px gray;
 }
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 200,
+    'opsz' 40;
+    color: rgb(161, 155, 155);
+  }
 .ekart--add--to--wishlist{
     padding:2px 10px;
     text-align: right;
@@ -43,15 +57,20 @@
 .ekart--product--image{
     width: 265px;
     height: 250px;
+    object-fit: cover;
 }
 .ekart--product--name{
     font-size: 14px;
     color: #28282B;
     margin-top: 7px;
 }
-.ekart--product--category,
-.ekart--product--available-colors{
-    font-size: 12px;
-    color: #999;
-    margin-top: 7px;
+
+.ekart--product--category {
+    margin: 10px 10px;
+}
+.ekart--product--category > span{
+    font-size: 13px;
+    color: white;
+    margin: 5px 5px 5px 5px ;
+    background-color: #36454F;
 }

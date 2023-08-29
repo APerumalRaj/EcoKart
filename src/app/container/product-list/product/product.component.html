@@ -1,7 +1,9 @@
 <div class="ekart--product--item " appHighlight>
     <div class="ekart-wishlist-sale-container"  >
         <div class="ekart--add--to--wishlist">
-          <i class="fa fa-heart-o"  appFavIcon></i>
+            <span class="material-symbols-outlined fav" appFavIcon>
+                favorite
+                </span>
         </div>
        <div class="ekart-on-sale-tag" *ngIf="product.discountPrice">{{ (product.price - product.discountPrice )}} %</div> 
       </div>
@@ -11,8 +13,13 @@
       <div class="ekart--add--to--price">
           {{ product.price}}
       </div>
-      <div class="ekart--product--name">{{ product.name }}</div>
-      <div class="ekart--product--category">{{product.gender}}. {{ product.category}}.{{ product.brand}}</div>
-      <div class="ekart--product--available-colors" >Available Color {{ product.color}}</div>
+<div class="bold">
+      <div class="ekart--product--name ">{{ product.name }}</div>
+      <div class="ekart--product--category">
+        <span> {{product.gender}} </span>
+        <span> {{ product.category}}</span> 
+        <span> {{ product.brand}}</span>
+    </div>
       <div class="ekart--product--stock" [ngStyle]=" product.is_in_inventory ? {'color': 'green'} : {'color' : 'red'}" >{{ product.is_in_inventory ? 'Available in Stock' : 'Not available in Stock '}}</div>
+</div>
 </div>

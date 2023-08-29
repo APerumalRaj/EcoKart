@@ -1,16 +1,4 @@
-import { Component, Input } from '@angular/core';
-import { Products } from 'src/app/Models/Products';
-import  * as product from 'src/assets/json/data.js'
-
-@Component({
-  selector: 'product-list',
-  templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.css']
-})
-export class ProductListComponent {
-
-  selectedproduct : Products;
-  products =[{
+[{
     id: 1,
     name: "Nike React Infinity Run Flyknit",
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
@@ -534,33 +522,4 @@ export class ProductListComponent {
     imageURL: "https://images.vans.com/is/image/Vans/MV122M-HERO?$583x583$",
     slug: "michael-feburary-sk8-hi"
   }
-];
-
-  totalProduct = this.products.length
-  istock = this.products.filter(p  => p.is_in_inventory == true).length
-  ostock = this.products.filter(p => p.is_in_inventory == false ).length
-  omen = this.products.filter(p => p.gender == "MEN").length
-  owomen = this.products.filter(p => p.gender == "WOMEN").length
-  okids = this.products.filter(p => p.gender== "KIDS").length
-  oname = this.products.map(p => p.name)
-
-
-  selectedFilter : string = 'all'
-
-  
-  onFilter(radio: string){
-    this.selectedFilter = radio
-  }
-
-  ngOnInit(){
-    console.log(this.oname);
-    }
-
-  @Input()
-  searchText : string = ''
-
-  @Input()
-  presearchText : string = ''
-
-  
-}
+]

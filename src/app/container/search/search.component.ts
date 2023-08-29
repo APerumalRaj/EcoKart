@@ -1,4 +1,9 @@
 import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
+import { FormControl, FormsModule } from '@angular/forms';
+import { Products } from 'src/app/Models/Products';
+import { ProductListComponent } from '../product-list/product-list.component';
+import { Observable, map, startWith } from 'rxjs';
+
 
 @Component({
   selector: 'search',
@@ -27,6 +32,24 @@ export class SearchComponent {
   updateSearchText(){
       this.searchText = this.searchInputEl.nativeElement.value
       this.searchTextChange.emit(this.searchText)
-     }
+  }
 
+
+// myControl = new FormControl('');
+//   filteredOptions: Observable<string[]>;
+
+  // OnFocus() {
+  //     this.filteredOptions = this.myControl.valueChanges.pipe(
+  //     startWith(''),
+  //     map(value => this._filter(value || '')),
+  //   );
+  //   console.log(this.options);
+    
+  // }
+
+  // private _filter(value: string): string[] {
+  //   const filterValue = value.toLowerCase();
+
+  //   return this.options.filter(option => option.toLowerCase().includes(filterValue));
+  // }
 }

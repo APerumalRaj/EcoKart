@@ -1,9 +1,9 @@
 <div class="ekart--search--product">
-    <!-- [(ngModel)]="searchText"  (input)="onsearchTextChange() -->
-    <input class="ekart-search-product-input" #searchInput [(ngModel)]="preSearchText" (input)="onLoad()" >
-    <button Class="btn btn-search" (click)="updateSearchText()">
-        <i class="fa fa-search" aria-hidden="true"></i>
-    </button>
+    
+    <input class="ekart-search-product-input" #searchInput [(ngModel)]="preSearchText" (input)="onLoad()" [(ngModel)]="searchText" >
+    <button  Class="btn btn-search" (click)="updateSearchText()" (keydown)="updateSearchText()">
+      <i class="fa fa-search" aria-hidden="true"></i>
+</button>
 </div>
 <div class="ekart-search-result-for">
     <p *ngIf="searchText"><strong>Search result for:</strong> {{ searchText }}</p>

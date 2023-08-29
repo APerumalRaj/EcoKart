@@ -13,14 +13,15 @@ export class ProductDetailComponent {
   productListco : ProductListComponent = undefined
 
   product : Products ;
-@Output()
-  Destroy = false
 
-DestructionStatus = new EventEmitter<boolean>()
-onClose(){
-  this.Destroy = !this.Destroy
-  this.DestructionStatus.emit(this.Destroy)
-}
+// @Output()
+//   Destroy = false
+
+// DestructionStatus = new EventEmitter<boolean>()
+// onClose(){
+//   this.Destroy = !this.Destroy
+//   this.DestructionStatus.emit(this.Destroy)
+// }
 
   ngOnInit(){
     this.product = this.productListco.selectedproduct;
