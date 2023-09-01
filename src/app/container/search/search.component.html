@@ -1,9 +1,23 @@
 <div class="ekart--search--product">
     
-    <input class="ekart-search-product-input" #searchInput [(ngModel)]="preSearchText" (input)="onLoad()" [(ngModel)]="searchText" >
+    <!-- <input class="ekart-search-product-input" #searchInput [(ngModel)]="preSearchText" (input)="onLoad()" [(ngModel)]="searchText" >
     <button  Class="btn btn-search" (click)="updateSearchText()" (keydown)="updateSearchText()">
       <i class="fa fa-search" aria-hidden="true"></i>
-</button>
+</button> -->
+    <input type="text"
+           matInput
+           [formControl]="myControl"
+           [matAutocomplete]="auto"
+           class="ekart-search-product-input" #searchInput [(ngModel)]="preSearchText" (input)="onLoad()" [(ngModel)]="searchText" >
+           <button  Class="btn btn-search" (click)="updateSearchText()" (keydown)="updateSearchText()">
+            <i class="fa fa-search" aria-hidden="true"></i>
+      </button>
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+        {{option}}
+      </mat-option>
+    </mat-autocomplete>
+
 </div>
 <div class="ekart-search-result-for">
     <p *ngIf="searchText"><strong>Search result for:</strong> {{ searchText }}</p>

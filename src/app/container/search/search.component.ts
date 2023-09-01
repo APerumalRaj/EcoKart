@@ -1,8 +1,9 @@
 import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { FormControl, FormsModule } from '@angular/forms';
-import { Products } from 'src/app/Models/Products';
+import { Products } from '../../Models/Products';
 import { ProductListComponent } from '../product-list/product-list.component';
 import { Observable, map, startWith } from 'rxjs';
+import { DataService } from '../../Services/data.service';
 
 
 @Component({
@@ -34,22 +35,22 @@ export class SearchComponent {
       this.searchTextChange.emit(this.searchText)
   }
 
+constructor(private data : DataService){}
 
-// myControl = new FormControl('');
-//   filteredOptions: Observable<string[]>;
+  myControl = new FormControl('');
+  options: string[] = this.data.products.map( p => p.name);
+  filteredOptions: Observable<string[]>;
 
-  // OnFocus() {
-  //     this.filteredOptions = this.myControl.valueChanges.pipe(
-  //     startWith(''),
-  //     map(value => this._filter(value || '')),
-  //   );
-  //   console.log(this.options);
-    
-  // }
+  ngOnInit() {
+    this.filteredOptions = this.myControl.valueChanges.pipe(
+      startWith(''),
+      map(value => this._filter(value || '')),
+    );
+  }
 
-  // private _filter(value: string): string[] {
-  //   const filterValue = value.toLowerCase();
+  private _filter(value: string): string[] {
+    const filterValue = value.toLowerCase();
 
-  //   return this.options.filter(option => option.toLowerCase().includes(filterValue));
-  // }
+    return this.options.filter(option => option.toLowerCase().includes(filterValue));
+  }
 }
