@@ -1,4 +1,7 @@
 
 <div class="ekart-menu" >
-    <a href="#" *ngFor="let m of ['Home','Products','About','Contact']">{{ m }}</a>
+    <a [routerLink]="['/Home']">HOME</a>
+    <a [routerLink]="['/Details']">PRODUCTS</a>
+    <a [routerLink]="['/Contact']">CONTACT</a>
+    <a href="#">ABOUT</a>
 </div>

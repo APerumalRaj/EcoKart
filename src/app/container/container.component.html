@@ -1,10 +1,7 @@
 <div class="container">
     <!-- -->
     <search (searchTextChange)="setsearchText($event)" 
-    (presearchTextChange)="onLoading($event)"
-    style="  position: -webkit-sticky;
-    position: sticky;
-    top: 75px;" ></search>
+    (presearchTextChange)="onLoading($event)"></search>
     <product-list [searchText]="searchText" #productList></product-list>
     <!-- (DestructionStatus)="onChange($any($event))" -->
     <product-detail *ngIf="productList.selectedproduct" [productListco]="ProductListComponent"  #close class="det"> 

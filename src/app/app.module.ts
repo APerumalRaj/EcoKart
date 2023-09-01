@@ -1,5 +1,6 @@
 import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { Routes,RouterModule } from '@angular/router';
 import { TopHeaderComponent } from './top-header/top-header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +20,13 @@ import { DetailcloseDirective } from './CustomDirective/detailclose.directive';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularMaterialModule } from './angular-material/angular-material.module';
+import { ContactComponent } from './contact/contact.component';
+
+const appRoute : Routes = [
+ { path: 'Home', component: ContainerComponent},
+ { path:  'Details',component: ProductDetailComponent},
+ { path : 'Contact', component: ContactComponent}
+]
 
 @NgModule({
   declarations: [
@@ -45,6 +53,7 @@ import { AngularMaterialModule } from './angular-material/angular-material.modul
     FormsModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
+    RouterModule.forRoot(appRoute),
   ],
   providers: [],
   bootstrap: [AppComponent],
