@@ -21,11 +21,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularMaterialModule } from './angular-material/angular-material.module';
 import { ContactComponent } from './contact/contact.component';
+import { CartComponent } from './cart/cart.component';
 
 const appRoute : Routes = [
+  { path: '', component: ContainerComponent},
  { path: 'Home', component: ContainerComponent},
  { path:  'Details',component: ProductDetailComponent},
- { path : 'Contact', component: ContactComponent}
+ { path : 'Contact', component: ContactComponent},
+ { path: 'Cart', component:CartComponent}
 ]
 
 @NgModule({

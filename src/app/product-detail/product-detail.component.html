@@ -1,12 +1,14 @@
 <div class="ekart--product--details--info scroll">
     <h1></h1>
+   
     <div class="ekart-product-detail-close" >
-        <a href="Home"><i class="fa fa-times" aria-hidden="true"></i></a>
+        <a [routerLink]="['/Contact']"><i class="fa fa-times" aria-hidden="true"></i></a>
     </div>
+    <div class="grid1">
     <div class="ekart-product-detail-image">
         <img [src]="product.imageURL" class="ekart-product-detail-image">
     </div>
-    
+<div class="first-layer" >
     <div class="ekart-product-detail">
         <div class="ekart-product-detail-name">
             <h2>{{product.name}}</h2>
@@ -46,7 +48,10 @@
                 <span class="ekart-product-detail-available-color" style="background-color: blue;"></span>
             </diV>                
         </div>
-
+</div>
+</div>
+</div>
+<div class="second-layer">
         <div class="ekart-product-detail-desc">
             <div style="padding: 5px 0px;border-bottom: #ccc 2px solid">
                 <h4>Product Description</h4>
@@ -54,13 +59,13 @@
             <div style="margin-top: 20px">
                 <p>{{product.description}}</p>
             </div>                
-        </div>
-    </div>
+         </div>
     <div class="ekart-product-detail-addtoCart">
-        <button class="btn-add-to-cart" *ngIf="product.is_in_inventory ; else notifyme" >ADD TO CART</button>
+        <button class="btn-add-to-cart" *ngIf="product.is_in_inventory ; else notifyme" (click)="Onclick(product.id)">ADD TO CART</button>
         <ng-template #notifyme>
-            <button class="btn-add-to-cart">NOTIFY ME</button>
+            <button class="btn-add-to-cart" (click)="OnNotify(product.name)">NOTIFY ME</button>
         </ng-template>
     </div>
 </div>
-<div class="overlay"></div>
+</div>
+<!-- <div class="overlay"></div> -->

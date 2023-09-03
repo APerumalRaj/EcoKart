@@ -1,6 +1,7 @@
 import { Component, ElementRef, EventEmitter, Input, Output } from '@angular/core';
 import { ProductListComponent } from '../container/product-list/product-list.component';
 import { Products } from '../Models/Products';
+import { CartService } from '../Services/cart.service';
 
 @Component({
   selector: 'product-detail',
@@ -8,23 +9,26 @@ import { Products } from '../Models/Products';
   styleUrls: ['./product-detail.component.css']
 })
 export class ProductDetailComponent {
+  constructor(private cartService : CartService){}
+ 
   
   @Input() 
   productListco : ProductListComponent = undefined
 
   product : Products ;
 
-// @Output()
-//   Destroy = false
-
-// DestructionStatus = new EventEmitter<boolean>()
-// onClose(){
-//   this.Destroy = !this.Destroy
-//   this.DestructionStatus.emit(this.Destroy)
-// }
 
   ngOnInit(){
     this.product = this.productListco.selectedproduct;
   }
 
+  
+  Onclick(value : any){
+    this.cartService.addToCart(value)
+    
+  }
+
+  OnNotify(value : string){
+    alert("It has been Notified! If "+ value +"is available we will notify you.")
+  }
 }
