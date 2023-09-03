@@ -1,6 +1,7 @@
 import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Routes,RouterModule } from '@angular/router';
+import { CarouselModule } from '@syncfusion/ej2-angular-navigations';
 import { TopHeaderComponent } from './top-header/top-header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,13 +23,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularMaterialModule } from './angular-material/angular-material.module';
 import { ContactComponent } from './contact/contact.component';
 import { CartComponent } from './cart/cart.component';
+import { HomeComponent } from './home/home.component';
+import { FeatureComponent } from './home/feature/feature.component'
 
 const appRoute : Routes = [
-  { path: '', component: ContainerComponent},
- { path: 'Home', component: ContainerComponent},
+  { path: '', component: HomeComponent},
+ { path: 'Product', component: ContainerComponent},
  { path:  'Details',component: ProductDetailComponent},
  { path : 'Contact', component: ContactComponent},
- { path: 'Cart', component:CartComponent}
+ { path: 'Cart', component:CartComponent},
+ { path : 'Home', component: HomeComponent}
 ]
 
 @NgModule({
@@ -48,6 +52,8 @@ const appRoute : Routes = [
     HighlightDirective,
     FavIconDirective,
     DetailcloseDirective,
+    HomeComponent,
+    FeatureComponent,
   ],
   imports: [
     AngularMaterialModule,
@@ -56,6 +62,7 @@ const appRoute : Routes = [
     FormsModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
+    CarouselModule,
     RouterModule.forRoot(appRoute),
   ],
   providers: [],

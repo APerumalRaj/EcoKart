@@ -9,7 +9,7 @@
            [formControl]="myControl"
            [matAutocomplete]="auto"
            class="ekart-search-product-input" #searchInput [(ngModel)]="preSearchText" (input)="onLoad()" [(ngModel)]="searchText" >
-           <button  Class="btn btn-search" (click)="updateSearchText()" (keydown)="updateSearchText()">
+           <button  Class="btn btn-search" (onkeydown)="updateSearchText()" (keydown)="updateSearchText()">
             <i class="fa fa-search" aria-hidden="true"></i>
       </button>
     <mat-autocomplete #auto="matAutocomplete">

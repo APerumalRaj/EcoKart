@@ -6,11 +6,13 @@
 [kid]="okids"
 (selectedFilterChange)="onFilter($event)"></app-filter>
     <!--  -->
-<ng-container class="ekart-products-container" *ngFor=" let prod of products" >
+    <div class="ekart-products-container" >
+<ng-container *ngFor=" let prod of products" >
     <ng-container *ngIf="selectedFilter == 'all' || prod.is_in_inventory.toString() == selectedFilter || prod.gender.toLowerCase() == selectedFilter">
         <app-product [product]="prod" 
         *ngIf=" searchText=== '' || prod.name.toLowerCase().includes(searchText.toLowerCase())"  
-        (dblclick)="selectedproduct = prod"></app-product>
+        (dblclick)="selectedproduct = prod" ></app-product>
     </ng-container>
 </ng-container>
+</div>
 

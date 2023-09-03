@@ -1,0 +1,14 @@
+<div class="control-container">
+    <ejs-carousel>
+      <e-carousel-items *ngFor="let product of data">
+        <e-carousel-item>
+          <ng-template #template>
+            <figure class="img-container">
+              <img [src]="product.img" alt="cardinal" style="height:60%;width:60%;" />
+              <figcaption class="img-caption">Cardinal</figcaption>
+            </figure>
+          </ng-template>
+        </e-carousel-item>
+    </e-carousel-items>
+</ejs-carousel>
+</div>

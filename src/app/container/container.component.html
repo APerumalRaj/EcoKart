@@ -1,8 +1,8 @@
-<div class="container">
+<div >
     <!-- -->
     <search (searchTextChange)="setsearchText($event)" 
     (presearchTextChange)="onLoading($event)"></search>
-    <product-list [searchText]="searchText" #productList></product-list>
+    <product-list [searchText]="searchText" #productList class="container"></product-list> >
     <!-- (DestructionStatus)="onChange($any($event))" -->
     <product-detail *ngIf="productList.selectedproduct" [productListco]="ProductListComponent"  #close class="det"> 
     </product-detail>

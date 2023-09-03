@@ -1,5 +1,7 @@
 
-.det{
-    height: 100%;
-    width: 100%;
+/* .det{
+    display: absolute;
+} */
+.container{
+    margin: auto;
 }
