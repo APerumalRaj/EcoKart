@@ -7,10 +7,11 @@ export class CartService {
 
   constructor() { }
 
-  cartList : Number[]
+  cartList : Number[] = []
   addToCart(value : Number){
   this.cartList.push(value)
+  console.log(this.cartList);
   
-  }
+   }
 
 }

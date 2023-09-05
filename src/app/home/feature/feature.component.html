@@ -1,14 +1,20 @@
-<div class="control-container">
-    <ejs-carousel>
-      <e-carousel-items *ngFor="let product of data">
-        <e-carousel-item>
-          <ng-template #template>
-            <figure class="img-container">
-              <img [src]="product.img" alt="cardinal" style="height:60%;width:60%;" />
-              <figcaption class="img-caption">Cardinal</figcaption>
-            </figure>
-          </ng-template>
-        </e-carousel-item>
-    </e-carousel-items>
-</ejs-carousel>
+<div class="carousel" >
+  <ng-container *ngFor="let slide of slides; let i = index">
+  <ng-container  *ngIf="i === currentSlide">
+    <img
+    [src]="slide.src"
+      class="slide d-block w-100"
+      @Animation
+      (click)="onClick()"
+    />
+  </ng-container>
+</ng-container>
+
+  <button class="control prev" (click)=" onPreviousClick()">
+    <span class="arrow left"></span>
+  </button>
+  <button class="control next" (click)=" onNextClick()">
+    <span class="arrow right"></span>
+  </button>
 </div>
+

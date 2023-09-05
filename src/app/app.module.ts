@@ -1,7 +1,7 @@
 import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Routes,RouterModule } from '@angular/router';
-import { CarouselModule } from '@syncfusion/ej2-angular-navigations';
+// import { CarouselModule } from '@syncfusion/ej2-angular-navigations';
 import { TopHeaderComponent } from './top-header/top-header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -62,7 +62,7 @@ const appRoute : Routes = [
     FormsModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    CarouselModule,
+    // CarouselModule,
     RouterModule.forRoot(appRoute),
   ],
   providers: [],

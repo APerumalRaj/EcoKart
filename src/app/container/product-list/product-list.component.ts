@@ -29,9 +29,9 @@ constructor(private Data : DataService){}
     this.selectedFilter = radio
   }
 
-  ngOnInit(){
-    console.log(this.oname);
-    }
+  // ngOnInit(){
+  //   console.log(this.oname);
+  //   }
 
   @Input()
   searchText : string = ''
