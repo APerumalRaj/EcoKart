@@ -22,9 +22,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularMaterialModule } from './angular-material/angular-material.module';
 import { ContactComponent } from './contact/contact.component';
-import { CartComponent } from './cart/cart.component';
 import { HomeComponent } from './home/home.component';
-import { FeatureComponent } from './home/feature/feature.component'
+import { FeatureComponent } from './home/feature/feature.component';
+import CartlistComponent from './cart/cartlist/cartlist.component';
+import { CartComponent } from './cart/cart.component';
 
 const appRoute : Routes = [
   { path: '', component: HomeComponent},
@@ -54,6 +55,8 @@ const appRoute : Routes = [
     DetailcloseDirective,
     HomeComponent,
     FeatureComponent,
+    CartlistComponent,
+    CartComponent,
   ],
   imports: [
     AngularMaterialModule,

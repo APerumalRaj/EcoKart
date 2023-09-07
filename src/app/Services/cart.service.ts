@@ -1,15 +1,19 @@
 import { Injectable } from '@angular/core';
+import { Products } from '../Models/Products';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
 
+
   constructor() { }
 
-  cartList : Number[] = []
-  addToCart(value : Number){
-  this.cartList.push(value)
+  cartList : Products[] = []
+  addToCart(value){
+    if(!this.cartList.includes(value)){
+          this.cartList.push(value)
+    }
   console.log(this.cartList);
   
    }
