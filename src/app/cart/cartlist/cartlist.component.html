@@ -2,20 +2,27 @@
     <h1>Your Shopping Cart</h1>
     <div *ngFor="let cart of cartList" class="container">
         <img [src]="cart.imageURL">
+          <div> 
+            <p> <b>{{ cart.name}}</b></p>
+            <p> <b>{{ cart.brand}}</b></p>
+          </div>
             <div class="btncontainer">  
-                <button (click)="onPlus(cart.items_left)" class="btn"><i class="fa-solid fa-plus"></i></button>
+                <div><button (click)="onPlus(cart.items_left)" class="btn">+</button></div>
                     <p> {{ cartNumber}} </p>
-                <button (click)="onMinus()" class="btn">-</button>
+                <div><button (click)="onMinus()" class="btn">-</button ></div>
             </div>
             <div>
-                <p> Price : {{ cart.price * cartNumber }}</p>
+                <p #price>  Price : {{ cart.price * cartNumber }}</p>
             </div>
             <div>
                 <button (click)="onRemove(cart)" style="color: red;"> Remove </button>
             </div>
     </div>
+  
 <div class="checkout">
-
+ <div>
+     <app-checkout></app-checkout>
+ </div>
 </div>
 
 

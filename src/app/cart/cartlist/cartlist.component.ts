@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { CartService } from 'src/app/Services/cart.service';
 import { DataService } from 'src/app/Services/data.service';
 
@@ -16,9 +16,11 @@ export default class CartlistComponent {
 
   cartNumber : number = 1;
 
+  Quantity : number[] = []
+
   onPlus(Cart){
     if(this.cartNumber < Cart ){
-      this.cartNumber = this.cartNumber + 1; 
+      this.cartNumber++ ; 
     }
     else
        alert("No More Items Left")
@@ -26,7 +28,7 @@ export default class CartlistComponent {
 
   onMinus(){
     if(this.cartNumber > 0){
-        this.cartNumber = this.cartNumber - 1; 
+        this.cartNumber--; 
     }
     else
        alert("Should atleast have One item selected")
@@ -37,5 +39,6 @@ export default class CartlistComponent {
       console.log(this.cartList);
     }
   
+
     
   }
