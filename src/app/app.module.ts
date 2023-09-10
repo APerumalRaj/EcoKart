@@ -24,8 +24,10 @@ import { AngularMaterialModule } from './angular-material/angular-material.modul
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { FeatureComponent } from './home/feature/feature.component';
-import CartlistComponent from './cart/cartlist/cartlist.component';
+import {CartlistComponent } from './cart/cartlist/cartlist.component';
 import { CartComponent } from './cart/cart.component';
+import { CheckoutComponent } from './cart/cartlist/checkout/checkout.component';
+import { CartDirective } from './CustomDirective/cart.directive';
 
 const appRoute : Routes = [
   { path: '', component: HomeComponent},
@@ -57,6 +59,8 @@ const appRoute : Routes = [
     FeatureComponent,
     CartlistComponent,
     CartComponent,
+    CheckoutComponent,
+    CartDirective,
   ],
   imports: [
     AngularMaterialModule,
@@ -65,7 +69,7 @@ const appRoute : Routes = [
     FormsModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    // CarouselModule,
+    
     RouterModule.forRoot(appRoute),
   ],
   providers: [],

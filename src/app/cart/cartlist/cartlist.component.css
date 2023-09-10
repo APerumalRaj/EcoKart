@@ -1,11 +1,27 @@
+h1{
+    margin-left: 10rem;
+}
+
+.hostDiv{
+    display: flex;
+    justify-content: space-around;
+}
+.itemContainer{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+   
+}
+
 .container {
   display: flex;
   flex-direction: row;
   margin-left: 0px;
   height : 100px;
-  width : 50%;
+  width : 100%;
   gap: 7px;
   border-bottom: 1px solid black;
+  margin-bottom: 1rem;
 }
 
 img{
@@ -29,10 +45,3 @@ img{
     color: blue;
     border-radius: 10px;
 }
-
-hr.someClass {
-    background-color: black;
-    width: 50%;
-    height: 4px;
-    border-top: 1px solid black
-  }

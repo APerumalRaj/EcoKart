@@ -17,6 +17,8 @@ export class ProductDetailComponent {
 
   product : Products ;
 
+  notClicked : boolean = true;
+
 
   ngOnInit(){
     this.product = this.productListco.selectedproduct;
@@ -24,7 +26,8 @@ export class ProductDetailComponent {
 
   
   Onclick(value : any){
-    this.cartService.addToCart(value)
+    this.cartService.addToCart(value);
+    this.notClicked = false;
     
   }
 

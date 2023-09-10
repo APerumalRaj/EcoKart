@@ -1,1 +1,7 @@
-<p>checkout works!</p>
+<div> 
+    <p> Estimated  Price : ${{ TotalPrice }}</p>
+    <p> Shipping Cost : ${{ totalItems * 34 }}</p>
+    <p> Discount : {{ discountTotal }}</p>
+    <hr>
+    <p> Total price : {{ (this.TotalPrice + this.totalItems * 34)   }}</p>
+</div>

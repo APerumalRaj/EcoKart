@@ -1,31 +1,30 @@
-<div > 
-    <h1>Your Shopping Cart</h1>
-    <div *ngFor="let cart of cartList" class="container">
-        <img [src]="cart.imageURL">
-          <div> 
-            <p> <b>{{ cart.name}}</b></p>
-            <p> <b>{{ cart.brand}}</b></p>
-          </div>
-            <div class="btncontainer">  
-                <div><button (click)="onPlus(cart.items_left)" class="btn">+</button></div>
-                    <p> {{ cartNumber}} </p>
-                <div><button (click)="onMinus()" class="btn">-</button ></div>
-            </div>
-            <div>
-                <p #price>  Price : {{ cart.price * cartNumber }}</p>
-            </div>
-            <div>
-                <button (click)="onRemove(cart)" style="color: red;"> Remove </button>
-            </div>
+<h1>Your Shopping Cart</h1>
+<div  class="hostDiv"> 
+    <div class="itemContainer">
+        <div *ngFor="let cart of cartList" class="container">
+             <img [src]="cart.imageURL">
+             <div> 
+               <p> <b>{{ cart.name}}</b></p>
+               <p> <b>{{ cart.brand}}</b></p>
+             </div>
+               <div class="btncontainer">  
+                   <div><button (click)="onPlus(cart)" class="btn">+</button></div>
+                       <p> {{ cart.Quantity }} </p>
+                   <div><button (click)="onMinus(cart)" class="btn">-</button ></div>
+           
+               </div>
+               <div>
+                   <p #price>  Price : ${{ cart.price * cart.Quantity }}</p>
+               </div>
+               <div>
+                   <button (click)="onRemove(cart)" style="background-color: red; color: antiquewhite; font-size: 20px;"><span class="material-symbols-outlined">
+                    remove_shopping_cart
+                    </span>Remove </button>
+               </div>
+         </div>
     </div>
   
-<div class="checkout">
- <div>
-     <app-checkout></app-checkout>
- </div>
-</div>
-
-
-
-
+    <div class="checkout">
+        <app-checkout [TotalPrice]="totalPrice"></app-checkout>
+    </div>
 </div>

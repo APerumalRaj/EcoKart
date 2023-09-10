@@ -13,4 +13,5 @@ export class Products {
     imageURL: string;
     slug: string;
     discountPrice?: number;
+    Quantity?: number ; 
 }

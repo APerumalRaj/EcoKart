@@ -13,6 +13,10 @@ export class CartService {
   addToCart(value){
     if(!this.cartList.includes(value)){
           this.cartList.push(value)
+          this.cartList = this.cartList.map(obj => {
+                 return {...obj, Quantity : 1};
+               });
+          
     }
   console.log(this.cartList);
   
